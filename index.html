@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEO Pulse — AI Visibility Newsletter</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0d1117;
+      font-family: 'Inter', Arial, sans-serif;
+      color: #e6edf3;
+      min-height: 100vh;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    .hero {
+      background: linear-gradient(135deg, #0f0c29 0%, #0f4c75 50%, #1b262c 100%);
+      padding: 64px 24px 56px;
+      text-align: center;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
+      padding: 5px 14px;
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-size: 64px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -3px;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+    .hero-sub {
+      font-size: 17px;
+      color: rgba(255,255,255,0.5);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .hero-pulse {
+      display: inline-block;
+      margin-top: 24px;
+      background: rgba(99,179,237,0.15);
+      border: 1px solid rgba(99,179,237,0.3);
+      border-radius: 20px;
+      padding: 6px 18px;
+      font-size: 13px;
+      color: #63b3ed;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+      margin-bottom: 20px;
+    }
+
+    .issues-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .issue-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 14px;
+      padding: 22px 28px;
+      transition: border-color 0.15s, background 0.15s;
+      cursor: pointer;
+    }
+    .issue-card:hover {
+      background: #1c2128;
+      border-color: #3d444d;
+    }
+    .issue-left { flex: 1; }
+    .issue-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #63b3ed;
+      margin-bottom: 6px;
+    }
+    .issue-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #e6edf3;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .latest-badge {
+      display: inline-block;
+      background: #0f4c75;
+      color: #63b3ed;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .issue-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pill {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      font-weight: 500;
+    }
+    .arrow {
+      font-size: 20px;
+      color: rgba(255,255,255,0.2);
+      margin-left: 20px;
+      flex-shrink: 0;
+    }
+    .issue-card:hover .arrow {
+      color: #63b3ed;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 64px 0;
+      color: rgba(255,255,255,0.2);
+    }
+    .empty-state .icon { font-size: 48px; margin-bottom: 16px; }
+    .empty-state p { font-size: 15px; }
+
+    .footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.15);
+      border-top: 1px solid #21262d;
+    }
+
+    @media (max-width: 600px) {
+      .hero-title { font-size: 44px; letter-spacing: -2px; }
+      .issue-card { padding: 18px 20px; }
+      .issue-title { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-tag">AI Visibility Newsletter</div>
+    <div class="hero-title">GEO Pulse</div>
+    <div class="hero-sub">Daily news on Generative Engine Optimization, AI Visibility, and brand presence in LLM responses.</div>
+    <div class="hero-pulse">🌐 Powered by Navarro 🦅</div>
+  </div>
+
+  <div class="container">
+    <div class="section-label">All Issues</div>
+    <div class="issues-list" id="issues-list">
+
+      <!-- ISSUES_START -->
+      <div class="empty-state">
+        <div class="icon">🌐</div>
+        <p>First issue coming soon...</p>
+      </div>
+      <!-- ISSUES_END -->
+
+    </div>
+  </div>
+
+  <div class="footer">
+    GEO Pulse · Built by Navarro 🦅 · <a href="https://llmagnet.com" style="color:rgba(255,255,255,0.3)">LLMagnet.com</a>
+  </div>
+
+</body>
+</html>
