@@ -1,5 +1,36 @@
 {
-  "totalIssues": 0,
-  "lastIssue": null,
-  "covered": []
+  "totalIssues": 1,
+  "lastIssue": "2026-02-23",
+  "covered": [
+    {
+      "url": "https://www.searchenginejournal.com/microsoft-summarize-with-ai-buttons-used-to-poison-ai-recommendations/567941/",
+      "title": "Microsoft: 'Summarize With AI' Buttons Used To Poison AI Recommendations",
+      "date": "2026-02-23",
+      "issue": 1
+    },
+    {
+      "url": "https://www.searchenginejournal.com/chatgpt-search-often-switches-to-english-in-fan-out-queries-report/567811/",
+      "title": "ChatGPT Search Often Switches To English In Fan-Out Queries: Report",
+      "date": "2026-02-23",
+      "issue": 1
+    },
+    {
+      "url": "https://www.searchenginejournal.com/great-seo-is-good-geo-but-not-everyones-been-doing-great-seo/567628/",
+      "title": "35-Year SEO Veteran: Great SEO Is Good GEO — But Not Everyone's Been Doing Great SEO",
+      "date": "2026-02-23",
+      "issue": 1
+    },
+    {
+      "url": "https://www.searchenginejournal.com/why-ai-misreads-the-middle-of-your-best-pages/567486/",
+      "title": "Why AI Misreads The Middle Of Your Best Pages",
+      "date": "2026-02-23",
+      "issue": 1
+    },
+    {
+      "url": "https://www.searchenginejournal.com/seo-pulse-google-ai-mode-link-update-click-share-data-chatgpt-fan-outs/567838/",
+      "title": "Google AI Mode Link Update, Click Share Data & ChatGPT Fan-Outs – SEO Pulse",
+      "date": "2026-02-23",
+      "issue": 1
+    }
+  ]
 }
