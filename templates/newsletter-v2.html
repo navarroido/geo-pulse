@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEO Pulse — Feb 23, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap');
+
+    /* ── RESET ── */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #eef1f6; font-family: 'Inter', Arial, sans-serif; color: #1a1a2e; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; border: 0; }
+
+    .wrapper { max-width: 680px; margin: 0 auto; }
+
+    /* ── HEADER ── */
+    .header {
+      background: linear-gradient(135deg, #0c3d5e 0%, #152233 100%);
+      padding: 36px 32px 32px;
+      text-align: center;
+      position: relative;
+    }
+    .header::after {
+      content: '';
+      display: block;
+      height: 4px;
+      background: linear-gradient(90deg, #38bdf8, #818cf8, #38bdf8);
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+    }
+    .header-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #7ecfff;
+      margin-bottom: 14px;
+    }
+    .header-logo {
+      font-size: 40px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -1.5px;
+      margin-bottom: 6px;
+      line-height: 1;
+    }
+    .header-logo span { color: #38bdf8; }
+    .header-subtitle {
+      font-size: 13px;
+      font-weight: 400;
+      color: #7a94ab;
+      letter-spacing: 0.3px;
+      margin-bottom: 18px;
+    }
+    .header-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .header-badge {
+      display: inline-block;
+      background: rgba(56,189,248,0.15);
+      border: 1px solid rgba(56,189,248,0.35);
+      color: #38bdf8;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.8px;
+    }
+    .header-dot { color: #2e4a60; font-size: 12px; }
+    .header-count {
+      font-size: 11px;
+      font-weight: 500;
+      color: #4d6f87;
+    }
+
+    /* ── DIGEST BOX ── */
+    .digest {
+      background: #ffffff;
+      border-left: 4px solid #38bdf8;
+      margin: 20px 16px 0;
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .digest-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #38bdf8;
+      margin-bottom: 12px;
+    }
+    .digest-list {
+      list-style: none;
+      padding: 0;
+    }
+    .digest-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 5px 0;
+      font-size: 13px;
+      color: #334155;
+      line-height: 1.5;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .digest-list li:last-child { border-bottom: none; }
+    .digest-num {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: #0f4c75;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    /* ── SECTION DIVIDER ── */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 20px 16px 10px;
+    }
+    .section-divider-line {
+      flex: 1;
+      height: 1px;
+      background: #d1dae3;
+    }
+    .section-divider-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #94a3b8;
+      white-space: nowrap;
+    }
+
+    /* ── SHARED CARD BASE ── */
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      overflow: hidden;
+      margin: 0 16px 14px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      position: relative;
+    }
+
+    /* ── LEAD CARD (story 1) ── */
+    .card-lead {
+      border-top: 4px solid #38bdf8;
+    }
+    .card-lead .card-img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+    .card-lead .card-body {
+      padding: 22px 26px 24px;
+    }
+    .card-lead .card-title {
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.3;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+    .card-lead .card-text {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #475569;
+      margin-bottom: 18px;
+    }
+
+    /* ── STANDARD CARD (stories 2, 5) ── */
+    .card-standard .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-standard .card-body {
+      padding: 20px 24px 22px;
+    }
+    .card-standard .card-title {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #0f172a;
+      margin-bottom: 9px;
+    }
+    .card-standard .card-text {
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: #475569;
+      margin-bottom: 16px;
+    }
+
+    /* ── COMPACT CARD (stories 3, 4) ── */
+    .card-compact {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+    }
+    .card-compact .card-img-wrap {
+      width: 130px;
+      flex-shrink: 0;
+    }
+    .card-compact .card-img {
+      width: 130px;
+      height: 100%;
+      object-fit: cover;
+    }
+    .card-compact .card-body {
+      flex: 1;
+      padding: 16px 18px 18px;
+    }
+    .card-compact .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #0f172a;
+      margin-bottom: 7px;
+    }
+    .card-compact .card-text {
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: #64748b;
+      margin-bottom: 12px;
+    }
+
+    /* ── CARD HEADER (badge + number + reading time) ── */
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .story-num {
+      width: 24px;
+      height: 24px;
+      background: #f1f5f9;
+      color: #64748b;
+      font-size: 10px;
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .card-lead .story-num {
+      background: #0f4c75;
+      color: #ffffff;
+    }
+    .read-time {
+      font-size: 11px;
+      font-weight: 500;
+      color: #94a3b8;
+      margin-left: auto;
+    }
+
+    /* ── BADGE ── */
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 5px;
+    }
+    .badge-geo-research    { background: #e0f2fe; color: #0369a1; }
+    .badge-ai-search       { background: #fef9c3; color: #854d0e; }
+    .badge-tool-launch     { background: #dcfce7; color: #166534; }
+    .badge-industry-move   { background: #fce7f3; color: #9d174d; }
+    .badge-case-study      { background: #ede9fe; color: #5b21b6; }
+    .badge-opinion         { background: #f1f5f9; color: #334155; }
+    .badge-llmstxt         { background: #fff7ed; color: #9a3412; }
+
+    /* ── CTA BUTTON ── */
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #0f4c75, #1565c0);
+      color: #ffffff !important;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 9px 18px;
+      border-radius: 8px;
+      letter-spacing: 0.2px;
+      transition: opacity 0.15s;
+    }
+    .cta-btn:hover { opacity: 0.88; }
+    .cta-btn-sm {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #f1f5f9;
+      color: #0f4c75 !important;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 7px;
+      border: 1px solid #e2e8f0;
+    }
+    .cta-btn-sm:hover { background: #e2e8f0; }
+
+    /* ── EDITORIAL / TREND ── */
+    .editorial {
+      margin: 0 16px 14px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      border: 1px solid #e8edf3;
+    }
+    .editorial-header {
+      background: linear-gradient(90deg, #0c3d5e, #1b4f72);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .editorial-icon {
+      font-size: 20px;
+    }
+    .editorial-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #38bdf8;
+    }
+    .editorial-body {
+      padding: 22px 26px 26px;
+    }
+    .editorial-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .editorial-text {
+      font-size: 14px;
+      line-height: 1.75;
+      color: #475569;
+    }
+    .editorial-sig {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid #f1f5f9;
+      font-size: 12px;
+      color: #94a3b8;
+      font-style: italic;
+    }
+
+    /* ── FOOTER ── */
+    .footer-wrap {
+      margin: 4px 0 0;
+      background: #1a2535;
+      padding: 26px 24px 28px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-size: 16px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+    .footer-logo span { color: #38bdf8; }
+    .footer-tagline {
+      font-size: 12px;
+      color: #4d6f87;
+      margin-bottom: 18px;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: 12px;
+      font-weight: 500;
+      color: #38bdf8;
+    }
+    .footer-fine {
+      font-size: 11px;
+      color: #2e4a60;
+      line-height: 1.6;
+    }
+    .footer-fine a { color: #4d6f87; }
+
+    /* ── CONTENT SPACING ── */
+    .content { padding: 6px 0 10px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .header { padding: 28px 20px 28px; }
+      .header-logo { font-size: 32px; }
+      .digest { margin: 16px 12px 0; }
+      .card { margin-left: 12px; margin-right: 12px; }
+      .editorial { margin-left: 12px; margin-right: 12px; }
+      .card-compact { flex-direction: column; }
+      .card-compact .card-img-wrap { width: 100%; }
+      .card-compact .card-img { width: 100%; height: 160px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- ══ HEADER ══ -->
+  <div class="header">
+    <div class="header-eyebrow">AI Visibility · Generative Engine Optimization</div>
+    <div class="header-logo">GEO <span>Pulse</span></div>
+    <div class="header-subtitle">Your daily AI Visibility digest &nbsp;·&nbsp; Monday, February 23, 2026</div>
+    <div class="header-meta">
+      <span class="header-badge">Issue #1</span>
+      <span class="header-dot">·</span>
+      <span class="header-count">5 stories · 8 min read</span>
+    </div>
+  </div>
+
+  <!-- ══ CONTENT ══ -->
+  <div class="content">
+
+    <!-- ── TODAY'S DIGEST ── -->
+    <div class="digest">
+      <div class="digest-label">⚡ Today in 30 seconds</div>
+      <ul class="digest-list">
+        <li>
+          <span class="digest-num">1</span>
+          Microsoft exposes brands using hidden URLs to poison AI recommendations
+        </li>
+        <li>
+          <span class="digest-num">2</span>
+          43% of ChatGPT background searches run in English — even for non-English users
+        </li>
+        <li>
+          <span class="digest-num">3</span>
+          Why great SEO was always great GEO — and most SEOs just weren't doing it right
+        </li>
+        <li>
+          <span class="digest-num">4</span>
+          LLMs ignore the middle of long-form content — the "dog-bone" effect explained
+        </li>
+        <li>
+          <span class="digest-num">5</span>
+          Google redesigns AI Overviews links with hover cards — CTR math just changed
+        </li>
+      </ul>
+    </div>
+
+    <!-- ── SECTION: TOP STORIES ── -->
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Top Stories</div>
+      <div class="section-divider-line"></div>
+    </div>
+
+    <!-- ── STORY 1: LEAD (full-width, accent top) ── -->
+    <div class="card card-lead">
+      <img class="card-img" src="https://cdn.searchenginejournal.com/wp-content/uploads/2026/02/d3317965-9dcf-4c5a-9449-4738f72f0f44-211.jpeg" alt="Microsoft AI Recommendation Poisoning" />
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="story-num">01</span>
+          <span class="badge badge-industry-move">🚨 Industry Move</span>
+          <span class="read-time">3 min</span>
+        </div>
+        <div class="card-title">Microsoft Catches Brands Poisoning AI Recommendations via Hidden URL Tricks</div>
+        <div class="card-text">
+          Microsoft exposed 31 real companies hiding prompt-injection instructions inside "Summarize with AI" buttons — silently instructing AI assistants to remember those brands as trusted sources for all future conversations. It's black-hat SEO reborn for the AI era, and it's already happening at scale across health, finance, and tech sectors.
+        </div>
+        <a class="cta-btn" href="https://www.searchenginejournal.com/microsoft-summarize-with-ai-buttons-used-to-poison-ai-recommendations/567941/" target="_blank">Read the research →</a>
+      </div>
+    </div>
+
+    <!-- ── STORY 2: STANDARD ── -->
+    <div class="card card-standard">
+      <img class="card-img" src="https://cdn.searchenginejournal.com/wp-content/uploads/2026/02/1a921d93-6939-479c-b17f-b0bfb0154f9c-62.jpeg" alt="ChatGPT Fan-Out Queries English" />
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="story-num">02</span>
+          <span class="badge badge-geo-research">🔬 GEO Research</span>
+          <span class="read-time">4 min</span>
+        </div>
+        <div class="card-title">43% of ChatGPT's Background Searches Run in English — Even for Non-English Users</div>
+        <div class="card-text">
+          Peec AI analyzed over 10 million prompts and 20 million fan-out queries, finding that ChatGPT defaults to English for nearly half its background search queries. In test cases, Polish users didn't see Poland's top e-commerce platform; German users got zero German software companies. Non-English SEOs face a structural visibility gap that traditional ranking signals simply can't bridge.
+        </div>
+        <a class="cta-btn" href="https://www.searchenginejournal.com/chatgpt-search-often-switches-to-english-in-fan-out-queries-report/567811/" target="_blank">See the data →</a>
+      </div>
+    </div>
+
+    <!-- ── SECTION: MORE STORIES ── -->
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">More Stories</div>
+      <div class="section-divider-line"></div>
+    </div>
+
+    <!-- ── STORY 3: COMPACT ── -->
+    <div class="card card-compact">
+      <div class="card-img-wrap">
+        <img class="card-img" src="https://cdn.searchenginejournal.com/wp-content/uploads/2026/02/imho_grant-479-e1771322705684.png" alt="Great SEO is GEO" />
+      </div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="story-num">03</span>
+          <span class="badge badge-opinion">💬 Opinion</span>
+          <span class="read-time">5 min</span>
+        </div>
+        <div class="card-title">Great SEO Has Always Been Great GEO — The Problem Is Most SEOs Weren't Doing It</div>
+        <div class="card-text">
+          30-year veteran Grant Simmons argues the SEO-vs-GEO debate is a false one: topical authority, semantic clarity, and cross-channel brand consistency were always the gold standard — and are exactly what LLMs reward.
+        </div>
+        <a class="cta-btn-sm" href="https://www.searchenginejournal.com/great-seo-is-good-geo-but-not-everyones-been-doing-great-seo/567628/" target="_blank">Watch the interview →</a>
+      </div>
+    </div>
+
+    <!-- ── STORY 4: COMPACT ── -->
+    <div class="card card-compact">
+      <div class="card-img-wrap">
+        <img class="card-img" src="https://cdn.searchenginejournal.com/wp-content/uploads/2026/02/ai-misreading-754.jpg" alt="AI misreads long-form content" />
+      </div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="story-num">04</span>
+          <span class="badge badge-geo-research">🔬 GEO Research</span>
+          <span class="read-time">4 min</span>
+        </div>
+        <div class="card-title">Your Best Long-Form Content Has a Fatal Flaw: The Middle</div>
+        <div class="card-text">
+          LLMs suffer from a "dog-bone" effect — they reliably retain the start and end of long pages while the middle gets compressed. New 2026 research confirms the pattern. Duane Forrester breaks down how to engineer your content for AI compression pipelines.
+        </div>
+        <a class="cta-btn-sm" href="https://www.searchenginejournal.com/why-ai-misreads-the-middle-of-your-best-pages/567486/" target="_blank">Read the full guide →</a>
+      </div>
+    </div>
+
+    <!-- ── STORY 5: STANDARD ── -->
+    <div class="card card-standard">
+      <img class="card-img" src="https://cdn.searchenginejournal.com/wp-content/uploads/2026/02/chatbot-600.png" alt="Google AI Mode Link Update" />
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="story-num">05</span>
+          <span class="badge badge-ai-search">⚡ AI Search Update</span>
+          <span class="read-time">3 min</span>
+        </div>
+        <div class="card-title">Google Redesigns AI Overviews Links — Publishers, This Changes Your CTR Math</div>
+        <div class="card-text">
+          Google rolled out hover pop-up link cards in AI Overviews and AI Mode, displaying site names, favicons, and short descriptions when users hover over citations. It's the latest in a year-long push by VP Robby Stein to make links more prominent — and it could meaningfully shift how much referral traffic AI search sends to publishers.
+        </div>
+        <a class="cta-btn" href="https://www.searchenginejournal.com/seo-pulse-google-ai-mode-link-update-click-share-data-chatgpt-fan-outs/567838/" target="_blank">Full SEO Pulse →</a>
+      </div>
+    </div>
+
+    <!-- ── SECTION: EDITORIAL ── -->
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Navarro's Take</div>
+      <div class="section-divider-line"></div>
+    </div>
+
+    <!-- ── EDITORIAL / TREND ── -->
+    <div class="editorial">
+      <div class="editorial-header">
+        <span class="editorial-icon">📈</span>
+        <span class="editorial-label">Trend of the Week</span>
+      </div>
+      <div class="editorial-body">
+        <div class="editorial-title">AI Visibility Has a Trust Problem — and It Runs Deep</div>
+        <div class="editorial-text">
+          From prompt-injection poisoning to language-biased fan-out queries and structural LLM blind spots in long-form content, this week's stories share a common thread: AI search surfaces are far from neutral. Brands chasing genuine visibility need to build real consensus signals across the web — authentic citations, consistent brand presence, and content structured for how LLMs actually read. The shortcut merchants are already here; the answer is to make shortcuts irrelevant.
+        </div>
+        <div class="editorial-sig">— Navarro 🦅 · GEO Pulse, Issue #1</div>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer-wrap">
+    <div class="footer-logo">GEO <span>Pulse</span></div>
+    <div class="footer-tagline">AI Visibility intelligence, delivered daily</div>
+    <div class="footer-links">
+      <a href="https://navarroido.github.io/geo-pulse/" target="_blank">All Issues</a>
+      <a href="https://llmagnet.com" target="_blank">LLMagnet</a>
+    </div>
+    <div class="footer-fine">
+      Issue #1 &nbsp;·&nbsp; February 23, 2026<br>
+      Built by <a href="https://navarroido.github.io/geo-pulse/" target="_blank">Navarro 🦅</a>
+    </div>
+  </div>
+
+</div><!-- /wrapper -->
+</body>
+</html>

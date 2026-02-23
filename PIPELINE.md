@@ -138,58 +138,60 @@ Wait for Ink to return copy.
 
 ## Step 5 — Build Newsletter HTML
 
-Use the structure below. All text is in English, layout is LTR.
-Save to: `/root/.openclaw/workspace/geo-pulse/newsletters/YYYY-MM-DD.html`
+Use the **V3 template** as the base design. Reference file:
+`/root/.openclaw/workspace/geo-pulse/templates/newsletter-v3.html`
 
-**Template rules:**
-- LTR, English, Inter/system font stack
-- lang="en" dir="ltr"
-- Items 1 and 2: full-width cards with large hero image (height: 240px, object-fit: cover)
-- Items 3 and 4: side-by-side half-width cards
-- Item 5: horizontal card (image right, text left)
-- Trend box: dark teal/indigo gradient at the bottom (GEO Pulse brand color: #0f4c75 → #1b262c)
-- Issue number: count from history.json totalIssues + 1
-- Header: dark gradient (indigo/teal), "GEO Pulse" title, subtitle "Your daily AI Visibility digest · [Day], [Date in English]" — no stats bar
-- CTA buttons: use Ink's cta_en text
-- Footer: "Issue #N · [Date] · Built by Navarro 🦅"
+Read that file in full and adapt it with today's content. Do NOT invent a new layout.
+
+Save output to: `/root/.openclaw/workspace/geo-pulse/newsletters/YYYY-MM-DD.html`
+
+**Template V3 rules:**
+- Fonts: `Playfair Display` (logo, editorial title) + `Inter` (body) — import from Google Fonts
+- Language: English, `lang="en" dir="ltr"`
+- Background: `#f0f3f8` body, `#060e1f` header and footer
+- Accent color: `#0ea5e9` (sky blue), secondary: `#818cf8` (indigo)
+- Issue number: count from `history.json` → `totalIssues + 1`
+- Max width: 680px, centered
+
+**Image handling — critical:**
+- Use CSS `aspect-ratio` on the image wrapper, NEVER fixed `height`
+- Story 1 (lead): `aspect-ratio: 16 / 9`
+- Story 2 and 5 (standard): `aspect-ratio: 3 / 2`
+- Stories 3 and 4 (compact, horizontal): `aspect-ratio: 4 / 3` on a 160px wide sidebar
+- Always set `object-fit: cover` on the `<img>` inside — so images fill cleanly without distortion
+
+**Layout structure (in order):**
+1. **Header** — dark `#060e1f` bg, rainbow gradient line at bottom, Playfair Display logo with gradient text, issue pill, date
+2. **Digest box** — white card with `#0ea5e9` left accent, numbered list of 5 headlines (30-second scan)
+3. **Section rule** — "Top Stories"
+4. **Story 1** — `.story.story-lead` — 16:9 image, large bold title, full body text, dark primary CTA button
+5. **Story 2** — `.story.story-standard` — 3:2 image, standard title, body, underline CTA
+6. **Section rule** — "More Stories"
+7. **Story 3** — `.story.story-compact` — 160px 4:3 thumbnail left, text right
+8. **Story 4** — `.story.story-compact` — same layout
+9. **Story 5** — `.story.story-standard` — 3:2 image, standard layout
+10. **Section rule** — "Navarro's Take"
+11. **Editorial box** — dark `#060e1f` bg, Playfair Display title, decorative quote mark `"`, Ink's trend copy
+12. **Footer** — dark bg, Playfair logo, links, fine print
 
 **Category badge colors:**
-- GEO Research → #e0f2fe / #0369a1
-- AI Search Update → #fef9c3 / #854d0e
-- Tool Launch → #dcfce7 / #166534
-- Industry Move → #fce7f3 / #9d174d
-- Case Study → #ede9fe / #5b21b6
-- Opinion → #f1f5f9 / #334155
-- LLMs.txt → #fff7ed / #9a3412
+- GEO Research     → `#eff6ff` / `#1d4ed8`
+- AI Search Update → `#fefce8` / `#a16207`
+- Tool Launch      → `#f0fdf4` / `#15803d`
+- Industry Move    → `#fff0f3` / `#be123c`
+- Case Study       → `#ede9fe` / `#5b21b6`
+- Opinion          → `#f8fafc` / `#475569` + `1px solid #e2e8f0`
+- LLMs.txt         → `#fff7ed` / `#9a3412`
 
-**Base HTML structure:**
-```html
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GEO Pulse — [DATE]</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { background:#f0f2f5; font-family:'Inter',Arial,sans-serif; direction:ltr; }
-    a { text-decoration:none; color:inherit; }
-    img { display:block; max-width:100%; border:0; }
-  </style>
-</head>
-<body>
-<!-- Header: dark indigo/teal gradient, GEO Pulse branding -->
-<!-- Items 1–2: full-width cards -->
-<!-- Items 3–4: side-by-side cards -->
-<!-- Item 5: horizontal card -->
-<!-- Trend box: teal gradient -->
-<!-- Footer -->
-</body>
-</html>
-```
+**CTAs:**
+- Story 1 and 5: dark button `.cta-primary` — `background: #0f172a`, white text, 10px radius
+- Stories 2, 3, 4: underline link `.cta-secondary` / `.cta-sm` — `color: #0ea5e9`, bottom border `#bae6fd`
 
-Build the full HTML expanding this structure with all real content from Dex + Ink.
+**Digest + story numbers:**
+- Digest numbers: `font-weight: 800`, color `#0ea5e9`
+- Story badge numbers: small `11px`, `font-weight: 800`, muted gray — except lead which is `#0ea5e9`
+
+Build the full HTML using this design. Copy ALL CSS from the reference template, then replace content only.
 
 ---
 
