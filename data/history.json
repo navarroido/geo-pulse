@@ -1,6 +1,6 @@
 {
-  "totalIssues": 1,
-  "lastIssue": "2026-02-23",
+  "totalIssues": 2,
+  "lastIssue": "2026-02-24",
   "covered": [
     {
       "url": "https://www.searchenginejournal.com/microsoft-summarize-with-ai-buttons-used-to-poison-ai-recommendations/567941/",
@@ -31,6 +31,36 @@
       "title": "Google AI Mode Link Update, Click Share Data & ChatGPT Fan-Outs – SEO Pulse",
       "date": "2026-02-23",
       "issue": 1
+    },
+    {
+      "url": "https://www.searchenginejournal.com/agentic-commerce-optimization-a-technical-guide-to-prepare-for-googles-ucp/566969/",
+      "title": "Agentic Commerce Optimization: A Technical Guide To Prepare For Google's UCP",
+      "date": "2026-02-24",
+      "issue": 2
+    },
+    {
+      "url": "https://www.searchenginejournal.com/google-discover-update-early-data-shows-fewer-domains-in-us/568091/",
+      "title": "Google Discover Update: Early Data Shows Fewer Domains In US",
+      "date": "2026-02-24",
+      "issue": 2
+    },
+    {
+      "url": "https://www.searchenginejournal.com/4-sites-that-recovered-from-googles-december-2025-core-update/567960/",
+      "title": "4 Sites That Recovered From Google's December 2025 Core Update – What They Changed",
+      "date": "2026-02-24",
+      "issue": 2
+    },
+    {
+      "url": "https://moz.com/blog/ai-mode-features-and-ranking-whiteboard-friday",
+      "title": "AI Mode: Features & Ranking — Whiteboard Friday",
+      "date": "2026-02-24",
+      "issue": 2
+    },
+    {
+      "url": "https://moz.com/blog/how-to-build-ai-citations-whiteboard-friday",
+      "title": "How to Build AI Citations — Whiteboard Friday",
+      "date": "2026-02-24",
+      "issue": 2
     }
   ]
 }

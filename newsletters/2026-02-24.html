@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEO Pulse — Feb 24, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Playfair+Display:wght@700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f0f3f8;
+      font-family: 'Inter', system-ui, sans-serif;
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; width: 100%; border: 0; }
+
+    .wrapper { max-width: 680px; margin: 0 auto; }
+
+    /* ══ HEADER ══ */
+    .header {
+      background: #060e1f;
+      padding: 0;
+      position: relative;
+    }
+    .header-inner {
+      padding: 34px 32px 30px;
+      text-align: center;
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .header-pill {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #0ea5e9;
+      background: rgba(14,165,233,0.1);
+      border: 1px solid rgba(14,165,233,0.25);
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+    .header-divider { width: 1px; height: 14px; background: #1e2e42; }
+    .header-issue {
+      font-size: 10px;
+      font-weight: 600;
+      color: #2e4a66;
+      letter-spacing: 1px;
+    }
+    .header-logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 48px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -1px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .header-logo em {
+      font-style: normal;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .header-sub {
+      font-size: 13px;
+      color: #4d6a84;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+    }
+    .header-rainbow {
+      height: 3px;
+      background: linear-gradient(90deg, #0ea5e9 0%, #6366f1 50%, #f43f5e 100%);
+    }
+
+    /* ══ DIGEST ══ */
+    .digest-wrap {
+      background: #ffffff;
+      padding: 20px 24px;
+      margin: 20px 16px 0;
+      border-radius: 16px;
+      border: 1px solid #e8ecf2;
+    }
+    .digest-headline {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .digest-icon { font-size: 14px; }
+    .digest-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #94a3b8;
+    }
+    .digest-items {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .digest-item {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .digest-item:last-child { border-bottom: none; }
+    .digest-n {
+      font-size: 11px;
+      font-weight: 800;
+      color: #0ea5e9;
+      flex-shrink: 0;
+      width: 18px;
+    }
+    .digest-text {
+      font-size: 13px;
+      color: #334155;
+      line-height: 1.4;
+      font-weight: 400;
+    }
+
+    /* ══ SECTION RULE ══ */
+    .rule {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 24px 16px 12px;
+    }
+    .rule-line { flex: 1; height: 1px; background: #dde3ec; }
+    .rule-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #94a3b8;
+    }
+
+    /* ══ STORY CARDS ══ */
+    .story {
+      background: #ffffff;
+      border-radius: 18px;
+      overflow: hidden;
+      margin: 0 16px 16px;
+      border: 1px solid #e8ecf2;
+    }
+
+    /* ── Story image: natural ratio, no cropping ── */
+    .story-img-wrap {
+      overflow: hidden;
+      background: #e8ecf2;
+    }
+    /* Lead: 16:9 */
+    .story-lead .story-img-wrap { aspect-ratio: 16 / 9; }
+    /* Standard: 3:2 */
+    .story-standard .story-img-wrap { aspect-ratio: 3 / 2; }
+    /* Compact: horizontal, 4:3 on the side */
+    .story-compact .story-img-wrap {
+      width: 160px;
+      flex-shrink: 0;
+      aspect-ratio: 4 / 3;
+    }
+
+    .story-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .story-body { padding: 22px 24px 24px; }
+
+    .story-compact {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+    }
+    .story-compact .story-body { padding: 16px 20px 18px; }
+
+    /* ── Meta row ── */
+    .story-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .story-num {
+      font-size: 11px;
+      font-weight: 800;
+      color: #cbd5e1;
+      letter-spacing: 0.5px;
+      margin-right: 2px;
+    }
+    .story-lead .story-num { color: #0ea5e9; }
+    .read-time {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-left: auto;
+      font-weight: 500;
+    }
+
+    /* ── Badges ── */
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 6px;
+    }
+    .badge-industry-move { background: #fff0f3; color: #be123c; }
+    .badge-geo-research  { background: #eff6ff; color: #1d4ed8; }
+    .badge-opinion       { background: #f8fafc; color: #475569; border: 1px solid #e2e8f0; }
+    .badge-ai-search     { background: #fefce8; color: #a16207; }
+    .badge-tool-launch   { background: #f0fdf4; color: #15803d; }
+    .badge-case-study    { background: #ede9fe; color: #5b21b6; }
+
+    /* ── Titles ── */
+    .story-lead .story-title {
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.28;
+      color: #0a0f1e;
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+    .story-standard .story-title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.32;
+      color: #0a0f1e;
+      margin-bottom: 10px;
+    }
+    .story-compact .story-title {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #0a0f1e;
+      margin-bottom: 8px;
+    }
+
+    /* ── Body text ── */
+    .story-lead .story-text {
+      font-size: 14.5px;
+      line-height: 1.72;
+      color: #475569;
+      margin-bottom: 20px;
+    }
+    .story-standard .story-text {
+      font-size: 13.5px;
+      line-height: 1.68;
+      color: #475569;
+      margin-bottom: 18px;
+    }
+    .story-compact .story-text {
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: #64748b;
+      margin-bottom: 14px;
+    }
+
+    /* ── CTAs ── */
+    .cta-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #0f172a;
+      color: #ffffff !important;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 10px;
+      letter-spacing: 0.1px;
+    }
+    .cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #0ea5e9 !important;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 0;
+      border-bottom: 1.5px solid #bae6fd;
+      padding-bottom: 1px;
+    }
+    .cta-sm {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #0ea5e9 !important;
+      font-size: 12px;
+      font-weight: 600;
+      border-bottom: 1.5px solid #bae6fd;
+      padding-bottom: 1px;
+    }
+
+    /* ══ EDITORIAL ══ */
+    .editorial {
+      margin: 0 16px 20px;
+      padding: 28px 28px 30px;
+      background: #060e1f;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+    .editorial::before {
+      content: '"';
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      font-size: 120px;
+      font-family: 'Playfair Display', serif;
+      color: rgba(14,165,233,0.12);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .editorial-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .editorial-icon { font-size: 15px; }
+    .editorial-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #0ea5e9;
+    }
+    .editorial-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+      margin-bottom: 14px;
+      position: relative;
+    }
+    .editorial-text {
+      font-size: 14px;
+      line-height: 1.78;
+      color: #7a94ab;
+      position: relative;
+    }
+    .editorial-sig {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid #0f1f33;
+      font-size: 12px;
+      color: #2e4a66;
+      font-style: italic;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* ══ FOOTER ══ */
+    .footer {
+      background: #060e1f;
+      padding: 28px 24px 32px;
+      text-align: center;
+      border-top: 1px solid #0d1a2d;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .footer-logo em {
+      font-style: normal;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .footer-tagline {
+      font-size: 12px;
+      color: #2e4a66;
+      margin-bottom: 20px;
+    }
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .footer-nav a {
+      font-size: 12px;
+      font-weight: 500;
+      color: #4d6f87;
+    }
+    .footer-fine {
+      font-size: 11px;
+      color: #1a2d42;
+      line-height: 1.7;
+    }
+    .footer-fine a { color: #2e4a66; }
+
+    /* ══ RESPONSIVE ══ */
+    @media (max-width: 600px) {
+      .header-inner { padding: 26px 20px 22px; }
+      .header-logo { font-size: 38px; }
+      .story { margin-left: 12px; margin-right: 12px; }
+      .digest-wrap { margin-left: 12px; margin-right: 12px; }
+      .editorial { margin-left: 12px; margin-right: 12px; }
+      .story-compact { flex-direction: column; }
+      .story-compact .story-img-wrap {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- ══ HEADER ══ -->
+  <div class="header">
+    <div class="header-inner">
+      <div class="header-top">
+        <span class="header-pill">AI Visibility · GEO</span>
+        <span class="header-divider"></span>
+        <span class="header-issue">Issue #2</span>
+      </div>
+      <div class="header-logo">GEO <em>Pulse</em></div>
+      <div class="header-sub">Your daily AI Visibility digest &nbsp;·&nbsp; Tuesday, February 24, 2026</div>
+    </div>
+    <div class="header-rainbow"></div>
+  </div>
+
+  <!-- ══ DIGEST ══ -->
+  <div class="digest-wrap">
+    <div class="digest-headline">
+      <span class="digest-icon">⚡</span>
+      <span class="digest-label">Today in 30 seconds</span>
+    </div>
+    <div class="digest-items">
+      <div class="digest-item">
+        <span class="digest-n">01</span>
+        <span class="digest-text">ACO is the new SEO: Google's UCP is live and AI agents are buying for customers on Wayfair and Etsy</span>
+      </div>
+      <div class="digest-item">
+        <span class="digest-n">02</span>
+        <span class="digest-text">Google Discover concentrates traffic in fewer publishers while expanding to more topics</span>
+      </div>
+      <div class="digest-item">
+        <span class="digest-n">03</span>
+        <span class="digest-text">Marie Haynes: brand trust in AI Mode, not just E-E-A-T, drove December core update recoveries</span>
+      </div>
+      <div class="digest-item">
+        <span class="digest-n">04</span>
+        <span class="digest-text">Moz study: only 12% of Google AI Mode citations overlap with traditional organic top 10</span>
+      </div>
+      <div class="digest-item">
+        <span class="digest-n">05</span>
+        <span class="digest-text">AI citation building is GEO's answer to link building, here is the playbook</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ TOP STORIES ══ -->
+  <div class="rule">
+    <div class="rule-line"></div>
+    <div class="rule-label">Top Stories</div>
+    <div class="rule-line"></div>
+  </div>
+
+  <!-- ── STORY 1: LEAD ── -->
+  <div class="story story-lead">
+    <div class="story-img-wrap">
+      <img src="https://cdn.searchenginejournal.com/wp-content/uploads/2026/02/agentic-commerce-809.jpg" alt="Agentic Commerce Optimization Guide" />
+    </div>
+    <div class="story-body">
+      <div class="story-meta">
+        <span class="story-num">01</span>
+        <span class="badge badge-industry-move">🛒 Industry Move</span>
+        <span class="read-time">9 min read</span>
+      </div>
+      <div class="story-title">ACO Is the New SEO: How to Get Selected by AI Shopping Agents</div>
+      <div class="story-text">
+        Google's Universal Commerce Protocol is no longer a waitlist item. It is live and already processing real purchases through AI Mode on Wayfair and Etsy. The era of optimizing for clicks is over: now you are optimizing to be selected by AI agents that handle the entire transaction lifecycle. Alex Moss breaks down the six-layer UCP framework and exactly which schema fields now determine whether an agent picks you or your competitor.
+      </div>
+      <a class="cta-primary" href="https://www.searchenginejournal.com/agentic-commerce-optimization-a-technical-guide-to-prepare-for-googles-ucp/566969/" target="_blank">Read the full guide →</a>
+    </div>
+  </div>
+
+  <!-- ── STORY 2: STANDARD ── -->
+  <div class="story story-standard">
+    <div class="story-img-wrap">
+      <img src="https://cdn.searchenginejournal.com/wp-content/uploads/2026/02/0cf67796-b937-4dd5-9fa3-110e4dce5568-410.jpeg" alt="Google Discover Update Fewer Domains" />
+    </div>
+    <div class="story-body">
+      <div class="story-meta">
+        <span class="story-num">02</span>
+        <span class="badge badge-ai-search">⚡ AI Search Update</span>
+        <span class="read-time">3 min read</span>
+      </div>
+      <div class="story-title">Google Discover Now Sends Traffic to Fewer Publishers — While Covering More Topics</div>
+      <div class="story-text">
+        Early NewzDash data from 40M+ US Discover feeds shows Google's February update consolidating visibility: more topics are covered, but fewer domains are winning the traffic. Regional specialists are gaining ground over generalists, and X.com's institutional posts jumped from 3 to 13 in the US top 100 placements. If your Discover traffic dropped this week, this is why.
+      </div>
+      <a class="cta-secondary" href="https://www.searchenginejournal.com/google-discover-update-early-data-shows-fewer-domains-in-us/568091/" target="_blank">See the data →</a>
+    </div>
+  </div>
+
+  <!-- ══ MORE STORIES ══ -->
+  <div class="rule">
+    <div class="rule-line"></div>
+    <div class="rule-label">More Stories</div>
+    <div class="rule-line"></div>
+  </div>
+
+  <!-- ── STORY 3: COMPACT ── -->
+  <div class="story story-compact">
+    <div class="story-img-wrap">
+      <img src="https://cdn.searchenginejournal.com/wp-content/uploads/2026/02/the-december-2025-core-update_1600x840-987.jpg" alt="December 2025 Core Update Recovery" />
+    </div>
+    <div class="story-body">
+      <div class="story-meta">
+        <span class="story-num">03</span>
+        <span class="badge badge-case-study">📊 Case Study</span>
+        <span class="read-time">14 min</span>
+      </div>
+      <div class="story-title">The Comeback Playbook: What Four Penalized Sites Actually Fixed</div>
+      <div class="story-text">
+        Marie Haynes reveals that AI Mode's perception of brand trust, not just technical signals, was decisive in core update recoveries. Try this prompt: "Make a chart showing the perceived trust in [brand] over time." If AI Mode draws a grim picture, your rankings will follow.
+      </div>
+      <a class="cta-sm" href="https://www.searchenginejournal.com/4-sites-that-recovered-from-googles-december-2025-core-update/567960/" target="_blank">Read the case studies →</a>
+    </div>
+  </div>
+
+  <!-- ── STORY 4: COMPACT ── -->
+  <div class="story story-compact">
+    <div class="story-img-wrap">
+      <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80" alt="AI Mode Rankings Research" />
+    </div>
+    <div class="story-body">
+      <div class="story-meta">
+        <span class="story-num">04</span>
+        <span class="badge badge-geo-research">🔬 GEO Research</span>
+        <span class="read-time">5 min</span>
+      </div>
+      <div class="story-title">Only 12% of AI Mode Citations Match Traditional Google Rankings</div>
+      <div class="story-text">
+        A Moz study of 40,000 keywords finds AI Mode sources almost entirely different content from organic SERPs, versus 88% overlap in AI Overviews. Bottom-half organic rankings are now nearly invisible to AI. GEO and SEO are officially different games.
+      </div>
+      <a class="cta-sm" href="https://moz.com/blog/ai-mode-features-and-ranking-whiteboard-friday" target="_blank">Explore the research →</a>
+    </div>
+  </div>
+
+  <!-- ── STORY 5: STANDARD ── -->
+  <div class="story story-standard">
+    <div class="story-img-wrap">
+      <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80" alt="How to Build AI Citations" />
+    </div>
+    <div class="story-body">
+      <div class="story-meta">
+        <span class="story-num">05</span>
+        <span class="badge badge-geo-research">🔬 GEO Research</span>
+        <span class="read-time">8 min read</span>
+      </div>
+      <div class="story-title">Citation Building Is GEO's Answer to Link Building. Here Is the Playbook.</div>
+      <div class="story-text">
+        Exposure Ninja CEO Charlie Marchant introduces a systematic framework for getting your brand cited in ChatGPT, Gemini, and Perplexity — starting with prompt research rather than keyword research. With 2.5 billion daily ChatGPT searches and 49% of them being questions, the stakes for AI citation visibility have never been higher. This is the practical GEO guide practitioners have been waiting for.
+      </div>
+      <a class="cta-primary" href="https://moz.com/blog/how-to-build-ai-citations-whiteboard-friday" target="_blank">Watch the Whiteboard Friday →</a>
+    </div>
+  </div>
+
+  <!-- ══ EDITORIAL ══ -->
+  <div class="rule">
+    <div class="rule-line"></div>
+    <div class="rule-label">Navarro's Take</div>
+    <div class="rule-line"></div>
+  </div>
+
+  <div class="editorial">
+    <div class="editorial-eyebrow">
+      <span class="editorial-icon">📈</span>
+      <span class="editorial-label">Trend of the Week</span>
+    </div>
+    <div class="editorial-title">AI Is Rebuilding the Commercial Web. Are You Optimized for Selection?</div>
+    <div class="editorial-text">
+      This week's stories share a throughline: the web's commercial and informational layers are being rebuilt around agent selection, not human clicking. Google's UCP means AI agents buy on your behalf. Discover's publisher consolidation means fewer brands win the attention game. And Moz's AI Mode data proves that traditional organic rankings are nearly irrelevant to what AI surfaces. The practitioners who are ahead — building schema for agents, earning citations proactively, and understanding brand trust as an AI-readable signal — are positioning themselves for dominance in a landscape most brands have not caught up to yet. The window to move first is still open, but it will not stay open for long.
+    </div>
+    <div class="editorial-sig">— Navarro 🦅 &nbsp;·&nbsp; GEO Pulse, Issue #2</div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <div class="footer-logo">GEO <em>Pulse</em></div>
+    <div class="footer-tagline">AI Visibility intelligence, delivered daily</div>
+    <div class="footer-nav">
+      <a href="https://navarroido.github.io/geo-pulse/" target="_blank">All Issues</a>
+      <a href="https://llmagnet.com" target="_blank">LLMagnet</a>
+    </div>
+    <div class="footer-fine">
+      Issue #2 &nbsp;·&nbsp; February 24, 2026<br>
+      Built with ♥ by <a href="https://navarroido.github.io/geo-pulse/" target="_blank">Navarro 🦅</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
