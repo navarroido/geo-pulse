@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEO Pulse — February 26, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Playfair+Display:wght@700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f0f3f8;
+      font-family: 'Inter', system-ui, sans-serif;
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; width: 100%; border: 0; }
+
+    .wrapper { max-width: 680px; margin: 0 auto; }
+
+    /* ══ HEADER ══ */
+    .header { background: #060e1f; padding: 0; position: relative; }
+    .header-inner { padding: 34px 32px 30px; text-align: center; }
+    .header-top {
+      display: flex; align-items: center; justify-content: center;
+      gap: 10px; margin-bottom: 18px;
+    }
+    .header-pill {
+      font-size: 10px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: #0ea5e9;
+      background: rgba(14,165,233,0.1); border: 1px solid rgba(14,165,233,0.25);
+      padding: 4px 12px; border-radius: 100px;
+    }
+    .header-divider { width: 1px; height: 14px; background: #1e2e42; }
+    .header-issue { font-size: 10px; font-weight: 600; color: #2e4a66; letter-spacing: 1px; }
+    .header-logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 48px; font-weight: 800; color: #ffffff;
+      letter-spacing: -1px; line-height: 1; margin-bottom: 10px;
+    }
+    .header-logo em {
+      font-style: normal;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .header-sub { font-size: 13px; color: #4d6a84; font-weight: 400; letter-spacing: 0.2px; }
+    .header-rainbow { height: 3px; background: linear-gradient(90deg, #0ea5e9 0%, #6366f1 50%, #f43f5e 100%); }
+
+    /* ══ DIGEST ══ */
+    .digest-wrap {
+      background: #ffffff; padding: 20px 24px;
+      margin: 20px 16px 0; border-radius: 16px; border: 1px solid #e8ecf2;
+    }
+    .digest-headline { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+    .digest-icon { font-size: 14px; }
+    .digest-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #94a3b8; }
+    .digest-items { display: flex; flex-direction: column; gap: 0; }
+    .digest-item {
+      display: flex; align-items: baseline; gap: 12px;
+      padding: 8px 0; border-bottom: 1px solid #f1f5f9;
+    }
+    .digest-item:last-child { border-bottom: none; }
+    .digest-n { font-size: 11px; font-weight: 800; color: #0ea5e9; flex-shrink: 0; width: 18px; }
+    .digest-text { font-size: 13px; color: #334155; line-height: 1.4; font-weight: 400; }
+
+    /* ══ SECTION RULE ══ */
+    .rule { display: flex; align-items: center; gap: 12px; padding: 24px 16px 12px; }
+    .rule-line { flex: 1; height: 1px; background: #dde3ec; }
+    .rule-label { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #94a3b8; }
+
+    /* ══ STORY CARDS ══ */
+    .story {
+      background: #ffffff; border-radius: 18px; overflow: hidden;
+      margin: 0 16px 16px; border: 1px solid #e8ecf2;
+    }
+    .story-img-wrap { overflow: hidden; background: #e8ecf2; }
+    .story-lead .story-img-wrap { aspect-ratio: 16 / 9; }
+    .story-standard .story-img-wrap { aspect-ratio: 3 / 2; }
+    .story-compact .story-img-wrap { width: 160px; flex-shrink: 0; aspect-ratio: 4 / 3; }
+    .story-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .story-body { padding: 22px 24px 24px; }
+    .story-compact { display: flex; flex-direction: row; align-items: stretch; }
+    .story-compact .story-body { padding: 16px 20px 18px; }
+
+    /* Meta */
+    .story-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+    .story-num { font-size: 11px; font-weight: 800; color: #cbd5e1; letter-spacing: 0.5px; margin-right: 2px; }
+    .story-lead .story-num { color: #0ea5e9; }
+    .read-time { font-size: 11px; color: #94a3b8; margin-left: auto; font-weight: 500; }
+
+    /* Badges */
+    .badge {
+      display: inline-block; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.2px; text-transform: uppercase; padding: 3px 9px; border-radius: 6px;
+    }
+    .badge-ai-search     { background: #fefce8; color: #a16207; }
+    .badge-opinion       { background: #f8fafc; color: #475569; border: 1px solid #e2e8f0; }
+    .badge-case-study    { background: #ede9fe; color: #5b21b6; }
+    .badge-tool-launch   { background: #f0fdf4; color: #15803d; }
+    .badge-geo-research  { background: #eff6ff; color: #1d4ed8; }
+
+    /* Titles */
+    .story-lead .story-title { font-size: 22px; font-weight: 800; line-height: 1.28; color: #0a0f1e; margin-bottom: 12px; letter-spacing: -0.3px; }
+    .story-standard .story-title { font-size: 18px; font-weight: 700; line-height: 1.32; color: #0a0f1e; margin-bottom: 10px; }
+    .story-compact .story-title { font-size: 14px; font-weight: 700; line-height: 1.35; color: #0a0f1e; margin-bottom: 8px; }
+
+    /* Body text */
+    .story-lead .story-text { font-size: 14.5px; line-height: 1.72; color: #475569; margin-bottom: 20px; }
+    .story-standard .story-text { font-size: 13.5px; line-height: 1.68; color: #475569; margin-bottom: 18px; }
+    .story-compact .story-text { font-size: 12.5px; line-height: 1.6; color: #64748b; margin-bottom: 14px; }
+
+    /* CTAs */
+    .cta-primary {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #0f172a; color: #ffffff !important; font-size: 13px;
+      font-weight: 600; padding: 10px 20px; border-radius: 10px; letter-spacing: 0.1px;
+    }
+    .cta-secondary {
+      display: inline-flex; align-items: center; gap: 5px;
+      color: #0ea5e9 !important; font-size: 13px; font-weight: 600;
+      border-bottom: 1.5px solid #bae6fd; padding-bottom: 1px;
+    }
+    .cta-sm {
+      display: inline-flex; align-items: center; gap: 5px;
+      color: #0ea5e9 !important; font-size: 12px; font-weight: 600;
+      border-bottom: 1.5px solid #bae6fd; padding-bottom: 1px;
+    }
+
+    /* ══ EDITORIAL ══ */
+    .editorial {
+      margin: 0 16px 20px; padding: 28px 28px 30px;
+      background: #060e1f; border-radius: 18px; position: relative; overflow: hidden;
+    }
+    .editorial::before {
+      content: '"'; position: absolute; top: -10px; left: 20px;
+      font-size: 120px; font-family: 'Playfair Display', serif;
+      color: rgba(14,165,233,0.12); line-height: 1; pointer-events: none;
+    }
+    .editorial-eyebrow { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+    .editorial-icon { font-size: 15px; }
+    .editorial-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #0ea5e9; }
+    .editorial-title { font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 700; color: #ffffff; line-height: 1.3; margin-bottom: 14px; position: relative; }
+    .editorial-text { font-size: 14px; line-height: 1.78; color: #7a94ab; position: relative; }
+    .editorial-sig { margin-top: 20px; padding-top: 16px; border-top: 1px solid #0f1f33; font-size: 12px; color: #2e4a66; font-style: italic; display: flex; align-items: center; gap: 8px; }
+
+    /* ══ FOOTER ══ */
+    .footer { background: #060e1f; padding: 28px 24px 32px; text-align: center; border-top: 1px solid #0d1a2d; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .footer-logo em { font-style: normal; background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .footer-tagline { font-size: 12px; color: #2e4a66; margin-bottom: 20px; }
+    .footer-nav { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
+    .footer-nav a { font-size: 12px; font-weight: 500; color: #4d6f87; }
+    .footer-fine { font-size: 11px; color: #1a2d42; line-height: 1.7; }
+    .footer-fine a { color: #2e4a66; }
+
+    /* ══ RESPONSIVE ══ */
+    @media (max-width: 600px) {
+      .header-inner { padding: 26px 20px 22px; }
+      .header-logo { font-size: 38px; }
+      .story { margin-left: 12px; margin-right: 12px; }
+      .digest-wrap { margin-left: 12px; margin-right: 12px; }
+      .editorial { margin-left: 12px; margin-right: 12px; }
+      .story-compact { flex-direction: column; }
+      .story-compact .story-img-wrap { width: 100%; aspect-ratio: 16 / 9; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- ══ HEADER ══ -->
+  <div class="header">
+    <div class="header-inner">
+      <div class="header-top">
+        <span class="header-pill">AI Visibility · GEO</span>
+        <span class="header-divider"></span>
+        <span class="header-issue">Issue #3</span>
+      </div>
+      <div class="header-logo">GEO <em>Pulse</em></div>
+      <div class="header-sub">Your daily AI Visibility digest &nbsp;·&nbsp; Thursday, February 26, 2026</div>
+    </div>
+    <div class="header-rainbow"></div>
+  </div>
+
+  <!-- ══ DIGEST ══ -->
+  <div class="digest-wrap">
+    <div class="digest-headline">
+      <span class="digest-icon">⚡</span>
+      <span class="digest-label">Today in 30 seconds</span>
+    </div>
+    <div class="digest-items">
+      <div class="digest-item">
+        <span class="digest-n">01</span>
+        <span class="digest-text">Anthropic splits Claude into 3 separate crawlers — blocking the wrong one now kills your AI search visibility</span>
+      </div>
+      <div class="digest-item">
+        <span class="digest-n">02</span>
+        <span class="digest-text">Kevin Indig: 84% of marketers measure LLM visibility wrong — AI-SEO fails at org alignment, not tactics</span>
+      </div>
+      <div class="digest-item">
+        <span class="digest-n">03</span>
+        <span class="digest-text">Real agency data: 429% more AI referral traffic, 40% of new leads from AI search</span>
+      </div>
+      <div class="digest-item">
+        <span class="digest-n">04</span>
+        <span class="digest-text">Nimble raises $47M to give LLMs real-time decision-grade web data — the hallucination gap has a price tag</span>
+      </div>
+      <div class="digest-item">
+        <span class="digest-n">05</span>
+        <span class="digest-text">Adobe survey: ChatGPT is now the #1 Google alternative at 14% — double TikTok, and rising across all ages</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ TOP STORIES ══ -->
+  <div class="rule">
+    <div class="rule-line"></div>
+    <div class="rule-label">Top Stories</div>
+    <div class="rule-line"></div>
+  </div>
+
+  <!-- ── STORY 1: LEAD ── -->
+  <div class="story story-lead">
+    <div class="story-img-wrap">
+      <img src="https://cdn.searchenginejournal.com/wp-content/uploads/2026/02/6e1bf69e-e759-43d3-b418-c18ddb5e4699-588.jpeg" alt="Anthropic Claude Crawlers" />
+    </div>
+    <div class="story-body">
+      <div class="story-meta">
+        <span class="story-num">01</span>
+        <span class="badge badge-ai-search">⚡ AI Search Update</span>
+        <span class="read-time">4 min read</span>
+      </div>
+      <div class="story-title">Anthropic Now Has 3 Separate Claude Crawlers. Block the Wrong One, Lose Your AI Visibility.</div>
+      <div class="story-text">
+        Anthropic updated its crawler docs to formally separate three distinct bots: ClaudeBot (training), Claude-User (user-directed retrieval), and Claude-SearchBot (AI search indexing). Each has its own robots.txt user-agent string. Blocking Claude-SearchBot now carries an explicit warning: it "may reduce your site's visibility and accuracy in user search results." This mirrors OpenAI's parallel three-tier structure and raises the stakes for anyone managing robots.txt. Check your disallow rules — now.
+      </div>
+      <a class="cta-primary" href="https://www.searchenginejournal.com/anthropics-claude-bots-make-robots-txt-decisions-more-granular/568253/" target="_blank">Read the full breakdown →</a>
+    </div>
+  </div>
+
+  <!-- ── STORY 2: STANDARD ── -->
+  <div class="story story-standard">
+    <div class="story-img-wrap">
+      <img src="https://cdn.searchenginejournal.com/wp-content/uploads/2026/02/kevin-indig-transformation-724.png" alt="Kevin Indig AI-SEO Change Management" />
+    </div>
+    <div class="story-body">
+      <div class="story-meta">
+        <span class="story-num">02</span>
+        <span class="badge badge-opinion">💬 Opinion</span>
+        <span class="read-time">5 min read</span>
+      </div>
+      <div class="story-title">AI-SEO Doesn't Fail on Tactics. It Fails on Organization.</div>
+      <div class="story-text">
+        Kevin Indig draws on 25 years of transformation research across 10,800 participants to make a pointed argument: 84% of marketers use inaccurate methods to measure LLM visibility, and the root cause isn't bad tools. It's conflicting ownership across SEO, PR, product, and legal teams, each running separate tests with incompatible goals. Until AI visibility has a real owner with a shared definition of success, the tactics won't stick.
+      </div>
+      <a class="cta-secondary" href="https://www.searchenginejournal.com/ai-seo-is-a-change-management-problem/568103/" target="_blank">See the argument →</a>
+    </div>
+  </div>
+
+  <!-- ══ MORE STORIES ══ -->
+  <div class="rule">
+    <div class="rule-line"></div>
+    <div class="rule-label">More Stories</div>
+    <div class="rule-line"></div>
+  </div>
+
+  <!-- ── STORY 3: COMPACT ── -->
+  <div class="story story-compact">
+    <div class="story-img-wrap">
+      <img src="https://static.semrush.com/blog/uploads/media/1a/23/1a23621597a9135d0d70c79a85009920/128bb478a6a8df461a71a43551456b4a/how-agencies-use-semrush-for-ai-visibility-sm.png" alt="Agencies AI Visibility Results" />
+    </div>
+    <div class="story-body">
+      <div class="story-meta">
+        <span class="story-num">03</span>
+        <span class="badge badge-case-study">📊 Case Study</span>
+        <span class="read-time">6 min</span>
+      </div>
+      <div class="story-title">Real Numbers: Agencies Report 429% AI Referral Growth, 40% of Leads from AI Search</div>
+      <div class="story-text">
+        Four agencies share actual AI visibility results: one achieved 429% more AI referral traffic and 137% more conversions, another now gets 40% of new leads directly from AI search. Semrush details the full AI Funnel framework behind these results.
+      </div>
+      <a class="cta-sm" href="https://www.semrush.com/blog/how-agencies-use-semrush-for-ai-visibility/" target="_blank">See the case studies →</a>
+    </div>
+  </div>
+
+  <!-- ── STORY 4: COMPACT ── -->
+  <div class="story story-compact">
+    <div class="story-img-wrap">
+      <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80" alt="Agentic Search Platform" />
+    </div>
+    <div class="story-body">
+      <div class="story-meta">
+        <span class="story-num">04</span>
+        <span class="badge badge-tool-launch">🚀 Tool Launch</span>
+        <span class="read-time">4 min</span>
+      </div>
+      <div class="story-title">Nimble Raises $47M to Feed LLMs Real-Time Web Data — No More Guesswork</div>
+      <div class="story-text">
+        Nimble's enterprise Agentic Search Platform uses a five-layer multi-agent architecture to deliver "decision-grade" real-time web data to AI systems, targeting the hallucination gap where LLMs generate outdated or fabricated answers. Works across OpenAI, Anthropic, and Gemini.
+      </div>
+      <a class="cta-sm" href="https://venturebeat.com/technology/the-era-of-human-web-search-is-over-nimble-launches-agentic-search-platform" target="_blank">Read the launch →</a>
+    </div>
+  </div>
+
+  <!-- ── STORY 5: STANDARD ── -->
+  <div class="story story-standard">
+    <div class="story-img-wrap">
+      <img src="https://cdn.searchenginejournal.com/wp-content/uploads/2026/02/1b4b9178-20d4-433b-b65c-93416db84d29-402.jpeg" alt="ChatGPT vs Google survey" />
+    </div>
+    <div class="story-body">
+      <div class="story-meta">
+        <span class="story-num">05</span>
+        <span class="badge badge-geo-research">🔬 GEO Research</span>
+        <span class="read-time">3 min read</span>
+      </div>
+      <div class="story-title">ChatGPT Is Now the #1 Google Alternative. Adobe's Data Makes the Case.</div>
+      <div class="story-text">
+        An Adobe Express survey of 807 U.S. consumers found 14% now prefer ChatGPT over Google for search, double the 7% who favor TikTok and consistent across all age groups including Boomers. Google holds at 85% helpful-for-search, but ChatGPT ranked third at 26% overall helpfulness, overtaking YouTube. For brand visibility strategy, this is no longer a niche data point.
+      </div>
+      <a class="cta-secondary" href="https://www.searchenginejournal.com/gen-z-preference-for-tiktok-over-google-drops-50-data-shows/568267/" target="_blank">See the survey data →</a>
+    </div>
+  </div>
+
+  <!-- ══ EDITORIAL ══ -->
+  <div class="rule">
+    <div class="rule-line"></div>
+    <div class="rule-label">Navarro's Take</div>
+    <div class="rule-line"></div>
+  </div>
+
+  <div class="editorial">
+    <div class="editorial-eyebrow">
+      <span class="editorial-icon">📈</span>
+      <span class="editorial-label">Trend of the Week</span>
+    </div>
+    <div class="editorial-title">AI Search Is Splitting Into Two Races: Infrastructure and Brand Trust</div>
+    <div class="editorial-text">
+      This week draws a clear line between two parallel battles for AI visibility. The infrastructure race: Anthropic formalizing three separate crawlers, Nimble building real-time data pipelines for LLMs, and Adobe's consumer data confirming ChatGPT is now a mainstream search destination. The brand trust race: Kevin Indig showing that organizations are measuring visibility wrong, and agencies proving that those who get it right see 4x growth in AI referral traffic. The brands that win will have both: clean technical foundations for AI crawlers, and the authentic web presence that earns citations. Neither alone is enough.
+    </div>
+    <div class="editorial-sig">— Navarro 🦅 &nbsp;·&nbsp; GEO Pulse, Issue #3</div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <div class="footer-logo">GEO <em>Pulse</em></div>
+    <div class="footer-tagline">AI Visibility intelligence, delivered daily</div>
+    <div class="footer-nav">
+      <a href="https://navarroido.github.io/geo-pulse/" target="_blank">All Issues</a>
+      <a href="https://llmagnet.com" target="_blank">LLMagnet</a>
+    </div>
+    <div class="footer-fine">
+      Issue #3 &nbsp;·&nbsp; February 26, 2026<br>
+      Built with ♥ by <a href="https://navarroido.github.io/geo-pulse/" target="_blank">Navarro 🦅</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

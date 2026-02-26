@@ -1,6 +1,6 @@
 {
-  "totalIssues": 2,
-  "lastIssue": "2026-02-24",
+  "totalIssues": 3,
+  "lastIssue": "2026-02-26",
   "covered": [
     {
       "url": "https://www.searchenginejournal.com/microsoft-summarize-with-ai-buttons-used-to-poison-ai-recommendations/567941/",
@@ -16,7 +16,7 @@
     },
     {
       "url": "https://www.searchenginejournal.com/great-seo-is-good-geo-but-not-everyones-been-doing-great-seo/567628/",
-      "title": "35-Year SEO Veteran: Great SEO Is Good GEO — But Not Everyone's Been Doing Great SEO",
+      "title": "35-Year SEO Veteran: Great SEO Is Good GEO",
       "date": "2026-02-23",
       "issue": 1
     },
@@ -28,7 +28,7 @@
     },
     {
       "url": "https://www.searchenginejournal.com/seo-pulse-google-ai-mode-link-update-click-share-data-chatgpt-fan-outs/567838/",
-      "title": "Google AI Mode Link Update, Click Share Data & ChatGPT Fan-Outs – SEO Pulse",
+      "title": "Google AI Mode Link Update, Click Share Data & ChatGPT Fan-Outs",
       "date": "2026-02-23",
       "issue": 1
     },
@@ -46,7 +46,7 @@
     },
     {
       "url": "https://www.searchenginejournal.com/4-sites-that-recovered-from-googles-december-2025-core-update/567960/",
-      "title": "4 Sites That Recovered From Google's December 2025 Core Update – What They Changed",
+      "title": "4 Sites That Recovered From Google's December 2025 Core Update",
       "date": "2026-02-24",
       "issue": 2
     },
@@ -61,6 +61,36 @@
       "title": "How to Build AI Citations — Whiteboard Friday",
       "date": "2026-02-24",
       "issue": 2
+    },
+    {
+      "url": "https://www.searchenginejournal.com/anthropics-claude-bots-make-robots-txt-decisions-more-granular/568253/",
+      "title": "Anthropic's Claude Bots Make Robots.txt Decisions More Granular",
+      "date": "2026-02-26",
+      "issue": 3
+    },
+    {
+      "url": "https://www.searchenginejournal.com/ai-seo-is-a-change-management-problem/568103/",
+      "title": "AI-SEO Is A Change Management Problem",
+      "date": "2026-02-26",
+      "issue": 3
+    },
+    {
+      "url": "https://www.semrush.com/blog/how-agencies-use-semrush-for-ai-visibility/",
+      "title": "How Agencies Use Semrush for AI Visibility",
+      "date": "2026-02-26",
+      "issue": 3
+    },
+    {
+      "url": "https://venturebeat.com/technology/the-era-of-human-web-search-is-over-nimble-launches-agentic-search-platform",
+      "title": "Nimble Launches Agentic Search Platform for Enterprises",
+      "date": "2026-02-26",
+      "issue": 3
+    },
+    {
+      "url": "https://www.searchenginejournal.com/gen-z-preference-for-tiktok-over-google-drops-50-data-shows/568267/",
+      "title": "ChatGPT Now Leads All Platforms as Google Alternative, Doubling TikTok",
+      "date": "2026-02-26",
+      "issue": 3
     }
   ]
 }
