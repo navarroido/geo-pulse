@@ -1,126 +1,31 @@
 {
-  "totalIssues": 4,
-  "lastIssue": "2026-02-27",
+  "totalIssues": 5,
+  "lastIssue": "2026-02-28",
   "covered": [
     {
-      "url": "https://www.searchenginejournal.com/microsoft-summarize-with-ai-buttons-used-to-poison-ai-recommendations/567941/",
-      "title": "Microsoft: 'Summarize With AI' Buttons Used To Poison AI Recommendations",
-      "date": "2026-02-23",
-      "issue": 1
-    },
-    {
-      "url": "https://www.searchenginejournal.com/chatgpt-search-often-switches-to-english-in-fan-out-queries-report/567811/",
-      "title": "ChatGPT Search Often Switches To English In Fan-Out Queries: Report",
-      "date": "2026-02-23",
-      "issue": 1
-    },
-    {
-      "url": "https://www.searchenginejournal.com/great-seo-is-good-geo-but-not-everyones-been-doing-great-seo/567628/",
-      "title": "35-Year SEO Veteran: Great SEO Is Good GEO",
-      "date": "2026-02-23",
-      "issue": 1
-    },
-    {
-      "url": "https://www.searchenginejournal.com/why-ai-misreads-the-middle-of-your-best-pages/567486/",
-      "title": "Why AI Misreads The Middle Of Your Best Pages",
-      "date": "2026-02-23",
-      "issue": 1
-    },
-    {
-      "url": "https://www.searchenginejournal.com/seo-pulse-google-ai-mode-link-update-click-share-data-chatgpt-fan-outs/567838/",
-      "title": "Google AI Mode Link Update, Click Share Data & ChatGPT Fan-Outs",
-      "date": "2026-02-23",
-      "issue": 1
-    },
-    {
-      "url": "https://www.searchenginejournal.com/agentic-commerce-optimization-a-technical-guide-to-prepare-for-googles-ucp/566969/",
-      "title": "Agentic Commerce Optimization: A Technical Guide To Prepare For Google's UCP",
-      "date": "2026-02-24",
-      "issue": 2
-    },
-    {
-      "url": "https://www.searchenginejournal.com/google-discover-update-early-data-shows-fewer-domains-in-us/568091/",
-      "title": "Google Discover Update: Early Data Shows Fewer Domains In US",
-      "date": "2026-02-24",
-      "issue": 2
-    },
-    {
-      "url": "https://www.searchenginejournal.com/4-sites-that-recovered-from-googles-december-2025-core-update/567960/",
-      "title": "4 Sites That Recovered From Google's December 2025 Core Update",
-      "date": "2026-02-24",
-      "issue": 2
-    },
-    {
-      "url": "https://moz.com/blog/ai-mode-features-and-ranking-whiteboard-friday",
-      "title": "AI Mode: Features & Ranking — Whiteboard Friday",
-      "date": "2026-02-24",
-      "issue": 2
-    },
-    {
-      "url": "https://moz.com/blog/how-to-build-ai-citations-whiteboard-friday",
-      "title": "How to Build AI Citations — Whiteboard Friday",
-      "date": "2026-02-24",
-      "issue": 2
-    },
-    {
-      "url": "https://www.searchenginejournal.com/anthropics-claude-bots-make-robots-txt-decisions-more-granular/568253/",
-      "title": "Anthropic's Claude Bots Make Robots.txt Decisions More Granular",
-      "date": "2026-02-26",
-      "issue": 3
-    },
-    {
-      "url": "https://www.searchenginejournal.com/ai-seo-is-a-change-management-problem/568103/",
-      "title": "AI-SEO Is A Change Management Problem",
-      "date": "2026-02-26",
-      "issue": 3
-    },
-    {
-      "url": "https://www.semrush.com/blog/how-agencies-use-semrush-for-ai-visibility/",
-      "title": "How Agencies Use Semrush for AI Visibility",
-      "date": "2026-02-26",
-      "issue": 3
-    },
-    {
-      "url": "https://venturebeat.com/technology/the-era-of-human-web-search-is-over-nimble-launches-agentic-search-platform",
-      "title": "Nimble Launches Agentic Search Platform for Enterprises",
-      "date": "2026-02-26",
-      "issue": 3
-    },
-    {
-      "url": "https://www.searchenginejournal.com/gen-z-preference-for-tiktok-over-google-drops-50-data-shows/568267/",
-      "title": "ChatGPT Now Leads All Platforms as Google Alternative, Doubling TikTok",
-      "date": "2026-02-26",
-      "issue": 3
+      "url": "https://www.searchenginejournal.com/visibility-enginerring-preference-engineering-the-infinite-tail/567557/",
+      "title": "Research Reveals the Importance of Preference Engineering in AI Searches",
+      "date": "2026-02-28"
     },
     {
       "url": "https://www.searchenginejournal.com/how-researchers-reverse-engineered-llms-for-a-ranking-experiment/568279/",
-      "title": "Scientists Cracked AI Rankings. Here Is What They Found.",
-      "date": "2026-02-27",
-      "issue": 4
-    },
-    {
-      "url": "https://www.searchenginejournal.com/visibility-enginerring-preference-engineering-the-infinite-tail/567557/",
-      "title": "Forget SEO. Welcome to the Era of Preference Engineering.",
-      "date": "2026-02-27",
-      "issue": 4
+      "title": "Scientists Successfully Reverse Engineer LLM Rankings",
+      "date": "2026-02-28"
     },
     {
       "url": "https://www.searchenginejournal.com/when-google-is-no-longer-a-verb-search-becoming-infrastructure/568135/",
-      "title": "AI Agents Are Taking Over Search. Is Your Brand Ready?",
-      "date": "2026-02-27",
-      "issue": 4
+      "title": "A Shift in Search: Google’s AI Agents Take Center Stage",
+      "date": "2026-02-28"
     },
     {
       "url": "https://www.searchenginejournal.com/google-says-links-will-be-more-visible-in-ai-overviews/567719/",
-      "title": "Google Promises Better Links in AI Overviews. The Data Says Otherwise.",
-      "date": "2026-02-27",
-      "issue": 4
+      "title": "Google Promises Improved Link Visibility in AI Overviews",
+      "date": "2026-02-28"
     },
     {
       "url": "https://www.searchenginejournal.com/cloudflares-new-markdown-for-ai-bots-what-you-need-to-know/567339/",
-      "title": "Cloudflare Now Serves Lean Markdown Straight to AI Crawlers",
-      "date": "2026-02-27",
-      "issue": 4
+      "title": "Cloudflare’s New Markdown for AI Bots: Key Insights",
+      "date": "2026-02-28"
     }
   ]
 }
