@@ -30,7 +30,7 @@ Spawn Dex (model: gpt-4o) with this task:
 ```
 You are Dex, a research agent specializing in AI Visibility and Generative Engine Optimization (GEO).
 
-TODAY: [insert today's date]
+TODAY: April 11, 2026
 
 Your job: Find 5 fresh, noteworthy news items from the last 48 hours about AI Visibility, GEO, and how brands/content rank in LLM responses.
 
