@@ -1,6 +1,6 @@
 {
-  "totalIssues": 8,
-  "lastIssue": "2026-04-01",
+  "totalIssues": 9,
+  "lastIssue": "2026-04-13",
   "covered": [
     {
       "url": "https://www.searchenginejournal.com/visibility-enginerring-preference-engineering-the-infinite-tail/567557/",
@@ -14,7 +14,7 @@
     },
     {
       "url": "https://www.searchenginejournal.com/when-google-is-no-longer-a-verb-search-becoming-infrastructure/568135/",
-      "title": "A Shift in Search: Google’s AI Agents Take Center Stage",
+      "title": "A Shift in Search: Google's AI Agents Take Center Stage",
       "date": "2026-02-28"
     },
     {
@@ -24,7 +24,7 @@
     },
     {
       "url": "https://www.searchenginejournal.com/cloudflares-new-markdown-for-ai-bots-what-you-need-to-know/567339/",
-      "title": "Cloudflare’s New Markdown for AI Bots: Key Insights",
+      "title": "Cloudflare's New Markdown for AI Bots: Key Insights",
       "date": "2026-02-28"
     },
     {
@@ -34,7 +34,7 @@
     },
     {
       "url": "https://www.searchenginejournal.com/chatgpt-search-often-switches-to-english-in-fan-out-queries-report/567811/",
-      "title": "Over 40% of ChatGPT's background searches conducted in English,",
+      "title": "Over 40% of ChatGPT's background searches conducted in English",
       "date": "2026-03-15"
     },
     {
@@ -51,6 +51,31 @@
       "url": "https://www.searchenginejournal.com/seo-pulse-google-ai-mode-link-update-click-share-data-chatgpt-fan-outs/567838/",
       "title": "Changes to Google AI Overviews links affect CTR math",
       "date": "2026-03-15"
+    },
+    {
+      "url": "https://www.searchenginejournal.com/how-ai-agents-see-your-website-and-how-to-build-for-them/570443/",
+      "title": "How AI Agents See Your Website (And How To Build For Them)",
+      "date": "2026-04-13"
+    },
+    {
+      "url": "https://moz.com/blog/brand-bias-in-llm-prompts",
+      "title": "Brand Bias in Prompts: An Experiment",
+      "date": "2026-04-13"
+    },
+    {
+      "url": "https://www.searchenginejournal.com/chatgpt-search-is-citing-fewer-sites-data-shows/571219/",
+      "title": "ChatGPT Search Is Citing Fewer Sites, Data Shows",
+      "date": "2026-04-13"
+    },
+    {
+      "url": "https://www.searchenginejournal.com/your-owned-content-is-losing-to-a-strangers-reddit-comment/571167/",
+      "title": "Your Owned Content Is Losing To A Stranger's Reddit Comment",
+      "date": "2026-04-13"
+    },
+    {
+      "url": "https://www.searchenginejournal.com/what-pichais-interview-reveals-about-googles-search-direction/571574/",
+      "title": "What Pichai's Interview Reveals About Google's Search Direction",
+      "date": "2026-04-13"
     }
   ]
 }

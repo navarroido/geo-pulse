@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEO Pulse — April 13, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Playfair+Display:wght@700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f0f3f8;
+      font-family: 'Inter', system-ui, sans-serif;
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; width: 100%; border: 0; }
+
+    .wrapper { max-width: 680px; margin: 0 auto; }
+
+    /* ══ HEADER ══ */
+    .header {
+      background: #060e1f;
+      padding: 0;
+      position: relative;
+    }
+    .header-inner {
+      padding: 34px 32px 30px;
+      text-align: center;
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .header-pill {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #0ea5e9;
+      background: rgba(14,165,233,0.1);
+      border: 1px solid rgba(14,165,233,0.25);
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+    .header-divider { width: 1px; height: 14px; background: #1e2e42; }
+    .header-issue {
+      font-size: 10px;
+      font-weight: 600;
+      color: #2e4a66;
+      letter-spacing: 1px;
+    }
+    .header-logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 48px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -1px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .header-logo em {
+      font-style: normal;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .header-sub {
+      font-size: 13px;
+      color: #4d6a84;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+    }
+    .header-rainbow {
+      height: 3px;
+      background: linear-gradient(90deg, #0ea5e9 0%, #6366f1 50%, #f43f5e 100%);
+    }
+
+    /* ══ DIGEST ══ */
+    .digest-wrap {
+      background: #ffffff;
+      padding: 20px 24px;
+      margin: 20px 16px 0;
+      border-radius: 16px;
+      border: 1px solid #e8ecf2;
+    }
+    .digest-headline {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .digest-icon { font-size: 14px; }
+    .digest-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #94a3b8;
+    }
+    .digest-items {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .digest-item {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .digest-item:last-child { border-bottom: none; }
+    .digest-n {
+      font-size: 11px;
+      font-weight: 800;
+      color: #0ea5e9;
+      flex-shrink: 0;
+      width: 18px;
+    }
+    .digest-text {
+      font-size: 13px;
+      color: #334155;
+      line-height: 1.4;
+      font-weight: 400;
+    }
+
+    /* ══ SECTION RULE ══ */
+    .rule {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 24px 16px 12px;
+    }
+    .rule-line { flex: 1; height: 1px; background: #dde3ec; }
+    .rule-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #94a3b8;
+    }
+
+    /* ══ STORY CARDS ══ */
+    .story {
+      background: #ffffff;
+      border-radius: 18px;
+      overflow: hidden;
+      margin: 0 16px 16px;
+      border: 1px solid #e8ecf2;
+    }
+
+    .story-img-wrap {
+      overflow: hidden;
+      background: #e8ecf2;
+    }
+    .story-lead .story-img-wrap { aspect-ratio: 16 / 9; }
+    .story-standard .story-img-wrap { aspect-ratio: 3 / 2; }
+    .story-compact .story-img-wrap {
+      width: 160px;
+      flex-shrink: 0;
+      aspect-ratio: 4 / 3;
+    }
+
+    .story-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .story-body { padding: 22px 24px 24px; }
+
+    .story-compact {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+    }
+    .story-compact .story-body { padding: 16px 20px 18px; }
+
+    /* ── Meta row ── */
+    .story-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .story-num {
+      font-size: 11px;
+      font-weight: 800;
+      color: #cbd5e1;
+      letter-spacing: 0.5px;
+      margin-right: 2px;
+    }
+    .story-lead .story-num { color: #0ea5e9; }
+    .read-time {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-left: auto;
+      font-weight: 500;
+    }
+
+    /* ── Badges ── */
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 6px;
+    }
+    .badge-industry-move { background: #fff0f3; color: #be123c; }
+    .badge-geo-research  { background: #eff6ff; color: #1d4ed8; }
+    .badge-opinion       { background: #f8fafc; color: #475569; border: 1px solid #e2e8f0; }
+    .badge-ai-search     { background: #fefce8; color: #a16207; }
+    .badge-tool-launch   { background: #f0fdf4; color: #15803d; }
+
+    /* ── Titles ── */
+    .story-lead .story-title {
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.28;
+      color: #0a0f1e;
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+    .story-standard .story-title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.32;
+      color: #0a0f1e;
+      margin-bottom: 10px;
+    }
+    .story-compact .story-title {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #0a0f1e;
+      margin-bottom: 8px;
+    }
+
+    /* ── Body text ── */
+    .story-lead .story-text {
+      font-size: 14.5px;
+      line-height: 1.72;
+      color: #475569;
+      margin-bottom: 20px;
+    }
+    .story-standard .story-text {
+      font-size: 13.5px;
+      line-height: 1.68;
+      color: #475569;
+      margin-bottom: 18px;
+    }
+    .story-compact .story-text {
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: #64748b;
+      margin-bottom: 14px;
+    }
+
+    /* ── CTAs ── */
+    .cta-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #0f172a;
+      color: #ffffff !important;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 10px;
+      letter-spacing: 0.1px;
+    }
+    .cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #0ea5e9 !important;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 0;
+      border-bottom: 1.5px solid #bae6fd;
+      padding-bottom: 1px;
+    }
+    .cta-sm {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #0ea5e9 !important;
+      font-size: 12px;
+      font-weight: 600;
+      border-bottom: 1.5px solid #bae6fd;
+      padding-bottom: 1px;
+    }
+
+    /* ══ EDITORIAL ══ */
+    .editorial {
+      margin: 0 16px 20px;
+      padding: 28px 28px 30px;
+      background: #060e1f;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+    .editorial::before {
+      content: '"';
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      font-size: 120px;
+      font-family: 'Playfair Display', serif;
+      color: rgba(14,165,233,0.12);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .editorial-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .editorial-icon { font-size: 15px; }
+    .editorial-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #0ea5e9;
+    }
+    .editorial-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+      margin-bottom: 14px;
+      position: relative;
+    }
+    .editorial-text {
+      font-size: 14px;
+      line-height: 1.78;
+      color: #7a94ab;
+      position: relative;
+    }
+    .editorial-sig {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid #0f1f33;
+      font-size: 12px;
+      color: #2e4a66;
+      font-style: italic;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* ══ FOOTER ══ */
+    .footer {
+      background: #060e1f;
+      padding: 28px 24px 32px;
+      text-align: center;
+      border-top: 1px solid #0d1a2d;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .footer-logo em {
+      font-style: normal;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .footer-tagline {
+      font-size: 12px;
+      color: #2e4a66;
+      margin-bottom: 20px;
+    }
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .footer-nav a {
+      font-size: 12px;
+      font-weight: 500;
+      color: #4d6f87;
+    }
+    .footer-fine {
+      font-size: 11px;
+      color: #1a2d42;
+      line-height: 1.7;
+    }
+    .footer-fine a { color: #2e4a66; }
+
+    /* ══ RESPONSIVE ══ */
+    @media (max-width: 600px) {
+      .header-inner { padding: 26px 20px 22px; }
+      .header-logo { font-size: 38px; }
+      .story { margin-left: 12px; margin-right: 12px; }
+      .digest-wrap { margin-left: 12px; margin-right: 12px; }
+      .editorial { margin-left: 12px; margin-right: 12px; }
+      .story-compact { flex-direction: column; }
+      .story-compact .story-img-wrap {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- ══ HEADER ══ -->
+  <div class="header">
+    <div class="header-inner">
+      <div class="header-top">
+        <span class="header-pill">AI Visibility · GEO</span>
+        <span class="header-divider"></span>
+        <span class="header-issue">Issue #9</span>
+      </div>
+      <div class="header-logo">GEO <em>Pulse</em></div>
+      <div class="header-sub">Your daily AI Visibility digest &nbsp;·&nbsp; Monday, April 13, 2026</div>
+    </div>
+    <div class="header-rainbow"></div>
+  </div>
+
+  <!-- ══ DIGEST ══ -->
+  <div class="digest-wrap">
+    <div class="digest-headline">
+      <span class="digest-icon">⚡</span>
+      <span class="digest-label">Today in 30 seconds</span>
+    </div>
+    <div class="digest-items">
+      <div class="digest-item">
+        <span class="digest-n">01</span>
+        <span class="digest-text">Bots now outnumber humans online — build your site for AI agents or get left behind</span>
+      </div>
+      <div class="digest-item">
+        <span class="digest-n">02</span>
+        <span class="digest-text">Branded prompts get 18x more AI mentions than generic ones, Moz research finds</span>
+      </div>
+      <div class="digest-item">
+        <span class="digest-n">03</span>
+        <span class="digest-text">ChatGPT is citing fewer sites per answer — the citation pool just shrank 20%</span>
+      </div>
+      <div class="digest-item">
+        <span class="digest-n">04</span>
+        <span class="digest-text">Reddit citations in AI Overviews grew 450% — your brand blog is losing to strangers</span>
+      </div>
+      <div class="digest-item">
+        <span class="digest-n">05</span>
+        <span class="digest-text">Pichai: 2027 is when Google Search becomes a full agent manager</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ TOP STORIES ══ -->
+  <div class="rule">
+    <div class="rule-line"></div>
+    <div class="rule-label">Top Stories</div>
+    <div class="rule-line"></div>
+  </div>
+
+  <!-- ── STORY 1: LEAD ── -->
+  <div class="story story-lead">
+    <div class="story-img-wrap">
+      <img src="https://cdn.searchenginejournal.com/wp-content/uploads/2026/03/agentic-ai-875.jpg" alt="Bots Now Outnumber Humans: Build Your Site for Both" />
+    </div>
+    <div class="story-body">
+      <div class="story-meta">
+        <span class="story-num">01</span>
+        <span class="badge badge-geo-research">🤖 GEO Research</span>
+        <span class="read-time">4 min read</span>
+      </div>
+      <div class="story-title">Bots Now Outnumber Humans: Build Your Site for Both</div>
+      <div class="story-text">
+        Over half of all web traffic is now automated, and AI agents like ChatGPT Atlas and Claude Computer Use are reading your site in three ways: screenshots, accessibility trees, and raw HTML. If your pages rely on JavaScript rendering or skip semantic markup, these agents may simply not understand you. Semantic HTML and server-rendered content are no longer best practices; they are survival tactics.
+      </div>
+      <a class="cta-primary" href="https://www.searchenginejournal.com/how-ai-agents-see-your-website-and-how-to-build-for-them/570443/" target="_blank">Learn how to build for AI agents →</a>
+    </div>
+  </div>
+
+  <!-- ── STORY 2: STANDARD ── -->
+  <div class="story story-standard">
+    <div class="story-img-wrap">
+      <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80" alt="Brand Bias in LLM Prompts" />
+    </div>
+    <div class="story-body">
+      <div class="story-meta">
+        <span class="story-num">02</span>
+        <span class="badge badge-geo-research">🔬 GEO Research</span>
+        <span class="read-time">5 min read</span>
+      </div>
+      <div class="story-title">Branded Prompts Get 18x More AI Mentions. Here Is Why.</div>
+      <div class="story-text">
+        Moz ran 300 prompts through Gemini and found a striking gap: branded queries triggered 14.5 brand mentions on average, while generic ones averaged just 0.79. The takeaway for marketers is clear: the prompts you track shape what you see, and most brand monitoring programs are dangerously narrow. Diversify your prompt spectrum or risk measuring a mirage.
+      </div>
+      <a class="cta-secondary" href="https://moz.com/blog/brand-bias-in-llm-prompts" target="_blank">See the research →</a>
+    </div>
+  </div>
+
+  <!-- ══ MORE STORIES ══ -->
+  <div class="rule">
+    <div class="rule-line"></div>
+    <div class="rule-label">More Stories</div>
+    <div class="rule-line"></div>
+  </div>
+
+  <!-- ── STORY 3: COMPACT ── -->
+  <div class="story story-compact">
+    <div class="story-img-wrap">
+      <img src="https://cdn.searchenginejournal.com/wp-content/uploads/2026/04/5526d0bd-b502-472a-8d1d-c253f50c6f3f-566.jpeg" alt="ChatGPT Citation Pool Shrinking" />
+    </div>
+    <div class="story-body">
+      <div class="story-meta">
+        <span class="story-num">03</span>
+        <span class="badge badge-ai-search">📉 AI Search Update</span>
+      </div>
+      <div class="story-title">ChatGPT Is Shrinking Its Citation Pool. Are You Still In?</div>
+      <div class="story-text">
+        A 14-week study of 27,000 ChatGPT responses shows average cited domains per answer dropped from 19 to 15 after GPT-5.3 Instant rolled out. The competition for each citation slot just got tighter.
+      </div>
+      <a class="cta-sm" href="https://www.searchenginejournal.com/chatgpt-search-is-citing-fewer-sites-data-shows/571219/" target="_blank">Read the full data →</a>
+    </div>
+  </div>
+
+  <!-- ── STORY 4: COMPACT ── -->
+  <div class="story story-compact">
+    <div class="story-img-wrap">
+      <img src="https://cdn.searchenginejournal.com/wp-content/uploads/2026/04/duane-forrester-decodes-content-vs-reddit-868.png" alt="Reddit Owns AI Search" />
+    </div>
+    <div class="story-body">
+      <div class="story-meta">
+        <span class="story-num">04</span>
+        <span class="badge badge-geo-research">🗣️ GEO Research</span>
+      </div>
+      <div class="story-title">Reddit Owns AI Search. Your Brand Blog Does Not.</div>
+      <div class="story-text">
+        Reddit is now the most-cited domain in both Google AI Overviews and Perplexity, with AI Overview citations up 450% between mid-2024 and mid-2025. No community presence means invisibility at both training and retrieval layers.
+      </div>
+      <a class="cta-sm" href="https://www.searchenginejournal.com/your-owned-content-is-losing-to-a-strangers-reddit-comment/571167/" target="_blank">Read the full story →</a>
+    </div>
+  </div>
+
+  <!-- ── STORY 5: STANDARD ── -->
+  <div class="story story-standard">
+    <div class="story-img-wrap">
+      <img src="https://cdn.searchenginejournal.com/wp-content/uploads/2026/04/b240b6d8-f9d7-4fec-85e8-86f7cce6f5e1-475.jpeg" alt="Pichai on Google Search Direction 2027" />
+    </div>
+    <div class="story-body">
+      <div class="story-meta">
+        <span class="story-num">05</span>
+        <span class="badge badge-industry-move">🧭 Industry Move</span>
+        <span class="read-time">4 min read</span>
+      </div>
+      <div class="story-title">Pichai Says 2027 Is When Search Becomes an Agent</div>
+      <div class="story-text">
+        Sundar Pichai envisions Google Search evolving into an agent manager where users delegate multiple concurrent tasks rather than clicking through links. He named 2027 as the inflection point for fully agentic business workflows. For GEO practitioners, this means optimizing for task outcomes and multi-step flows, not just keyword relevance.
+      </div>
+      <a class="cta-primary" href="https://www.searchenginejournal.com/what-pichais-interview-reveals-about-googles-search-direction/571574/" target="_blank">Read the breakdown →</a>
+    </div>
+  </div>
+
+  <!-- ══ EDITORIAL ══ -->
+  <div class="rule">
+    <div class="rule-line"></div>
+    <div class="rule-label">Navarro's Take</div>
+    <div class="rule-line"></div>
+  </div>
+
+  <div class="editorial">
+    <div class="editorial-eyebrow">
+      <span class="editorial-icon">📈</span>
+      <span class="editorial-label">Trend of the Week</span>
+    </div>
+    <div class="editorial-title">AI Visibility Rewards Structure, Presence, and Reach</div>
+    <div class="editorial-text">
+      This week's stories share a single message: the rules of AI visibility are being written right now, and passive brands are losing ground fast. Whether it is semantic code that agents can parse, community content that LLMs cite, or prompt diversity that reveals your true AI footprint, every gap is costing you reach. The practitioners who move first on these signals will define the citation landscape before their competitors even notice it has changed.
+    </div>
+    <div class="editorial-sig">— Navarro 🦅 &nbsp;·&nbsp; GEO Pulse, Issue #9</div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <div class="footer-logo">GEO <em>Pulse</em></div>
+    <div class="footer-tagline">AI Visibility intelligence, delivered daily</div>
+    <div class="footer-nav">
+      <a href="https://navarroido.github.io/geo-pulse/" target="_blank">All Issues</a>
+      <a href="https://llmagnet.com" target="_blank">LLMagnet</a>
+    </div>
+    <div class="footer-fine">
+      Issue #9 &nbsp;·&nbsp; April 13, 2026<br>
+      Built with ♥ by <a href="https://navarroido.github.io/geo-pulse/" target="_blank">Navarro 🦅</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
