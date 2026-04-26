@@ -1,5 +1,12 @@
 {
-  "totalIssues": 10,
-  "lastIssue": "2026-04-18",
-  "covered": []
+  "totalIssues": 11,
+  "lastIssue": "2026-04-26",
+  "covered": [
+    "https://www.searchenginejournal.com/microsoft-summarize-with-ai-buttons-used-to-poison-ai-recommendations/567941/",
+    "https://www.searchenginejournal.com/chatgpt-background-searches-english-report/567811/",
+    "https://www.searchenginejournal.com/great-seo-is-good-geo-but-not-everyones-been-doing-great-seo/567628/",
+    "https://www.searchenginejournal.com/why-ai-misreads-the-middle-of-your-best-pages/567486/",
+    "https://www.searchenginejournal.com/seo-pulse-google-ai-mode-link-update-click-share-data-chatgpt-fan-outs/567838/"
+  ],
+  "history": []
 }
