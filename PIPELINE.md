@@ -150,7 +150,7 @@ Save output to: `/root/.openclaw/workspace/geo-pulse/newsletters/YYYY-MM-DD.html
 - Language: English, `lang="en" dir="ltr"`
 - Background: `#f0f3f8` body, `#060e1f` header and footer
 - Accent color: `#0ea5e9` (sky blue), secondary: `#818cf8` (indigo)
-- Issue number: count from `history.json` → `totalIssues + 1`
+- Issue number: count from `history.json` → `1`
 - Max width: 680px, centered
 
 **Image handling — critical:**
